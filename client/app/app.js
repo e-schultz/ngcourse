@@ -1,6 +1,27 @@
- angular.module('erg', ['erg.server'])
- 	
- 	.run(function($log, $rootScope) {
-    	$log.info('STARTUP: All ready!');
-    	$rootScope.title="Test App";
-  	});
+angular.module('erg', [
+	'erg.server',
+//  'erg.main-ctrl',
+//  'erg.tasks',
+//   'erg.router',
+  'koast'
+])
+
+.run(function($log, koast) {
+  $log.info('All ready!');
+  // local
+  /*
+  koast.init({
+    baseUrl: 'http://localhost:3001'
+  });
+  koast.setApiUriPrefix('/api/v1/');
+  */
+  // hosted
+  
+  /*koast.init({
+    baseUrl: 'http://ngcourse.herokuapp.com'
+  });
+  koast.setApiUriPrefix('http://ngcourse.herokuapp.com/api/v1/');*/
+
+  //koast.addEndpoint('tasks-plus', ':taskId',{ useEnvelope: true });
+});
+

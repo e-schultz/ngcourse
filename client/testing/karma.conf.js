@@ -1,6 +1,6 @@
 module.exports = function (config) {
 
-  console.log(process.cwd());
+  console.log("yi" + process.cwd());
   config.set({
     basePath: 'client/',
     frameworks: ['mocha', 'chai', 'sinon'],

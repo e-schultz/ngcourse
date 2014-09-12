@@ -13,6 +13,6 @@ angular.module('erg', [
   });
   //koast.setApiUriPrefix('http://ngcourse.herokuapp.com/api/v1/');
   koast.setApiUriPrefix('/api/v1/');
-  koast.addEndpoint('tasks-plus', ':taskId');
+  koast.addEndpoint('tasks-plus', ':_id', { useEnvelope: true });
 });
 

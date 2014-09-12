@@ -27,6 +27,7 @@ angular.module('erg.tasks', [
     }
 
     service.updateTask = function(id, task) {
+        
         return koast.user.whenAuthenticated()
             .then(function() {
                 return server.put('/api/v1/tasks', id, {
@@ -40,7 +41,7 @@ angular.module('erg.tasks', [
         return koast.user.whenAuthenticated()
             .then(function() {
                 return koast.getResource('tasks-plus', {
-                    taskId: id
+                    _id: id
                 });
 
             });

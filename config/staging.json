@@ -1,0 +1,3 @@
+{
+  "databases": "import:./staging/databases.json"
+}

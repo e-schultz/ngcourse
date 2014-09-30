@@ -1,0 +1,33 @@
+{
+  "app": {
+    "indexHtml": "path:../client/index.html",
+    "portNumber": 3001,
+    "routes": [{
+      "route": "/api/v1",
+      "type": "module",
+      "module": "server/lib/api"
+    }]
+  },
+  "authentication": {
+    "strategy": "password",
+    "maintenance": "token"
+  },
+  "cors": {
+
+    "origin": "*",
+    "headers": "X-Requested-With, Content-Type, Authorization",
+    "methods": "GET,POST,PUT,DELETE,OPTIONS, Authorization",
+    "credentials": true
+
+  },
+  "databases": [{
+    "host": "127.0.0.1",
+    "port": "27017",
+    "db": "erg",
+    "schemas": "./server/schemas.js",
+    "handle": "_"
+  }],
+  "secrets": {
+    "authTokenSecret": "catsaretheinternet"
+  }
+}
